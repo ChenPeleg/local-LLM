@@ -1,0 +1,20 @@
+{
+  "name": "local-llm",
+  "version": "1.0.0",
+  "description": "local-llms",
+  "homepage": "https://github.com/ChenPeleg/local-LLM#readme",
+  "bugs": {
+    "url": "https://github.com/ChenPeleg/local-LLM/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChenPeleg/local-LLM.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
