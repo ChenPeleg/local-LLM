@@ -78,7 +78,7 @@ The Continue extension provides an AI assistant interface directly in VS Code.
 #### Inline Code Assistance
 1. **Generate Code**:
    - Type a comment describing what you want: `// Create a function to calculate fibonacci`
-   - Press `Ctrl+Shift+M` (or Cmd+Shift+M on Mac)
+   - Highlight the comment and use Continue's edit feature
    - Continue will generate the code
 
 2. **Edit Existing Code**:
@@ -96,7 +96,7 @@ The Continue extension provides an AI assistant interface directly in VS Code.
 Continue supports several slash commands in the chat:
 - `/edit` - Edit highlighted code
 - `/comment` - Add comments to code
-- `/share` - Share conversation
+- `/share` - Export conversation to share with others
 - `/codebase` - Ask questions about your codebase
 - `/file` - Reference a specific file
 
@@ -302,10 +302,10 @@ make a function
 - All processing happens locally - no data sent to cloud
 - Models and conversations stay on your machine
 - Safe for working with proprietary code
-- No API keys or internet connection required (after model download)
+- No external API keys required, and model inference runs fully offline after initial download
 
 ### 6. Efficient Workflows
-- Use keyboard shortcuts for faster access (Ctrl+Shift+M for Continue)
+- Use keyboard shortcuts for faster access to Continue panel
 - Save common prompts as snippets
 - Use slash commands for quick actions
 - Chain multiple requests for complex tasks
@@ -349,20 +349,22 @@ You can configure multiple models for different tasks:
 {
   "models": [
     {
-      "model": "small-fast-model",
+      "model": "qwen/qwen3-4b",
       "title": "Fast Completion",
       "provider": "openai",
       "apiBase": "http://localhost:8000/v1",
+      "apiKey": "not-needed",
       "completionOptions": {
         "temperature": 0.3,
         "max_tokens": 500
       }
     },
     {
-      "model": "large-smart-model",
+      "model": "qwen/qwen3-vl-8b",
       "title": "Deep Analysis",
       "provider": "openai",
       "apiBase": "http://localhost:8000/v1",
+      "apiKey": "not-needed",
       "completionOptions": {
         "temperature": 0.7,
         "max_tokens": 4096
