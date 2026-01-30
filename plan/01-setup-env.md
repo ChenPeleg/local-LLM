@@ -1,21 +1,19 @@
 # Local LLM in VS Code - Setup Plan
 
 ## 1. Environment Setup
-- Install Python (3.10+) and required dependencies
-- Install local LLM runtime (Ollama, LM Studio, or similar)
-- Download and configure the LLM model (e.g., Llama 2, Mistral)
+- Download and install LM Studio
+- Launch LM Studio and download a model (e.g., Llama 2, Mistral)
+- Start the local server (default: localhost:8000 or 11434)
 
 ## 2. VS Code Extension
-- Evaluate extension options:
-  - **Ollama extension** (if using Ollama)
-  - **Continue** (popular LLM assistant extension)
-  - **Codeium** or **GitHub Copilot** alternatives
-- Install and configure the chosen extension
+- Install **Continue** extension (best for LM Studio)
+  - Or **Codeium** / **GitHub Copilot** alternatives (if they support local APIs)
+- Continue supports OpenAI-compatible APIs (which LM Studio provides)
 
 ## 3. Connection Configuration
-- Ensure LLM service runs locally (default: localhost:11434 for Ollama)
-- Configure extension to point to local endpoint
-- Test basic connection and response
+- LM Studio runs on localhost:8000 by default (OpenAI-compatible API)
+- Configure Continue extension to point to `http://localhost:8000/v1`
+- Test connection in Continue chat
 
 ## 4. Optimization & Testing
 - Configure model parameters (temperature, context length, etc.)
