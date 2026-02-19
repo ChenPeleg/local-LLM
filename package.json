@@ -1,17 +1,24 @@
 {
   "name": "local-llm",
   "version": "1.0.0",
-  "description": "local-llms",
-  "homepage": "https://github.com/ChenPeleg/local-LLM#readme",
-  "license": "ISC",
-  "type": "module",
+  "description": "A local LLM project",
   "main": "index.js",
   "scripts": {
-    "start": "cn --config ./qwen.yaml",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo "Error: no test specified" && exit 1",
+    "start": "node server.js",
+    "fibonacci": "node src/fibonacci.js",
+    "dev": "nodemon server.js"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@continuedev/cli": "^1.5.43",
-    "@lmstudio/sdk": "^1.5.0"
+    "express": "^4.18.2",
+    "typescript": "^5.3.3",
+    "@types/express": "^4.17.17"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "@types/node": "^20.14.1"
   }
 }
