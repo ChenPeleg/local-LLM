@@ -7,7 +7,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "cn",
+    "start": "cn --config ./config.yaml",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
