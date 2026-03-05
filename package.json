@@ -5,6 +5,7 @@
   "description": "A local LLM project",
   "main": "index.js",
   "scripts": {
+    "dev": "cn --config qwen.yaml",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "fibonacci": "node src/fibonacci.ts"
