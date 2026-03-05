@@ -10,6 +10,7 @@
     "start": "echo \"started ",
     "fibonacci": "node src/fibonacci.ts",
     "ollama:install": "ollama pull qwen2.5-coder:14b",
+    "ollama:addpath": "powershell -Command \"[Environment]::SetEnvironmentVariable('Path', [Environment]::GetEnvironmentVariable('Path', 'User') + ';' + $env:LOCALAPPDATA + '\\Programs\\Ollama', 'User')\"",
     "ollama:start": "dotenv -e .env.ollama -- ollama serve",
     "ollama:stop": "taskkill /IM ollama.exe /F"
   },
