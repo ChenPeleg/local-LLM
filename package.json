@@ -8,7 +8,10 @@
     "dev": "cn --config continue-config.yaml",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "echo \"started ",
-    "fibonacci": "node src/fibonacci.ts"
+    "fibonacci": "node src/fibonacci.ts",
+    "ollama:install": "ollama pull qwen2.5-coder:14b",
+    "ollama:start": "dotenv -e .env.ollama -- ollama serve",
+    "ollama:stop": "taskkill /IM ollama.exe /F"
   },
   "author": "",
   "license": "ISC",
